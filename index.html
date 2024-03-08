@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Popup Box - Coding Habits</title>
+</head>
+<body>
+
+
+    <div class="container">
+        <button onclick="openPopup()" id="btn">Sumite File</button>
+
+        <div class="popup">
+            <i class="fa-regular fa-circle-check"></i>
+            <h1>Thank You!</h1>
+            <p>Thanks for Sumite your information stay with us</p>
+            <div class="btn" onclick="ClosePopup()">Okay</div>
+        </div>
+    </div>
+
+    <script>
+        let  popup = document.querySelector(".popup");
+        let btn = document.getElementById("btn")
+
+        function  openPopup(){
+            popup.classList.add("openPopup")
+            btn.style.display ="none";
+        }
+        
+        function  ClosePopup(){
+            popup.classList.remove("openPopup")
+            btn.style.display ="block";
+        }
+    </script>
+</body>
+</html>
